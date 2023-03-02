@@ -1,0 +1,15 @@
+{% if erro %}
+    Aconteceu um erro! 😭
+{% endif %}
+
+<form action="login_verifica.php" method="POST">
+    <div>
+        <input type="text" name="user" id="user" placeholder="Usuário">
+    </div>
+    <div>
+        <input type="password" name="password" id="password" placeholder="Senha">
+    </div>
+     <div>
+       <input type="submit" value="Acessar">
+    </div>
+</form>
