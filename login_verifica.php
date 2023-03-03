@@ -4,6 +4,8 @@
     $password = $_POST['password'];
 
     if($user == 'Lucas' && $senha = 123){
+        session_start();
+        $_SESSION['user'] = 'Lucas';
         header('location: boasvindas.php');
         die;
     }else {
