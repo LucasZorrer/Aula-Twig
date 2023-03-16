@@ -1,0 +1,36 @@
+{# templates/produtos.html #}
+
+{{ include('inc/header.html') }}
+
+<h1>Listagem de Usuários</h1>
+
+<table class="table  table-bordered">
+	<tr>
+		<th>ID</th>
+		<th>Nome</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Admin</th>
+		<th>Funções</th>
+	</tr>
+	{% for user in users %}
+		<tr>
+			<td>{{ user.id }}</td>
+            <td>{{ user.nome }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.username }}</td>	
+            <td>{{ user.admin }}</td>		
+			<td>
+				<a href="deleteUser.php?id={{ user.id }}"><i class="ph ph-trash"></i></a>
+				<a href="alterUser.php?id={{ user.id }}"><i class="ph ph-pencil-simple"></i></a>
+			</td>
+		</tr>
+	{% else %}
+		<tr>
+			<td colspan="2">Nenhum produto</td>
+		</tr>
+	{% endfor %}
+</table>
+
+
+{{ include('inc/footer.html') }}

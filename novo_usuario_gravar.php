@@ -18,8 +18,8 @@
         'cost' => 12
     ]);
 
-    $sql = $pdo->prepare("INSERT INTO usuarios (nome, email, username, senha, admin)  
-    VALUES (:nome, :email, :user, :senha, :admin)");
+    $sql = $pdo->prepare("INSERT INTO usuarios (nome, email, username, senha, admin, ativo)  
+    VALUES (:nome, :email, :user, :senha, :admin, 1)");
 
     $sql->bindParam(":user", $user);
     $sql->bindParam(":senha", $pass);
@@ -28,3 +28,5 @@
     $sql->bindParam(":admin", $admin);
 
     $sql->execute();
+
+    header('location: usuarios.php');
