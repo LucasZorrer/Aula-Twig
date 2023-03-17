@@ -9,7 +9,7 @@ $twig = new \Twig\Environment($loader);
 
 $template = $twig->load('listar_usuarios.html');
 
-$sql = $pdo->query('SELECT * FROM usuarios');
+$sql = $pdo->query('SELECT * FROM usuarios WHERE ativo = 1');
 
 $sql->execute();
 

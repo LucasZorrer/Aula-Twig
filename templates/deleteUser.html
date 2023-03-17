@@ -1,14 +1,28 @@
 {{ include('inc/header.html') }}
 
 
+<div class="container">
+	<h1>Apagar Usuário:
+	</h1>
+	<p>
+		<strong>Você está prestes a apagar o coitado do
+			{{ usuario.nome }}</strong>
+	</p>
 
-
-<h1>Apagar Usuário</h1>
-
-<p>Tem certeza de que quer fazer isso?</p>
-
-
-
-
+	<p>Tem certeza de que quer fazer isso?</p>
+	<form action="#" method="post">
+		<input type="hidden" name="id" value="{{ usuario.id }}">
+		<div class="row">
+			<div class="col">
+				<a href="">
+					<button type="button" class="btn btn-primary">Cancelar</button>
+				</a>
+			</div>
+			<div class="col">
+				<button type="submit" class="btn btn-danger">Confirmar</button>
+			</div>
+		</div>
+	</form>
+</div>
 
 {{ include('inc/footer.html') }}

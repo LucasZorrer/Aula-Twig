@@ -1,17 +1,21 @@
+{{ include('inc/header.html') }}
+
 {% if erro == 1 %}
     Usuário ou senha inválidos! 😭
 {% elseif erro == 2 %}
     Você está tentando acessar uma página restrita, safadinho! 🙄 
 {% endif %}
 
-<form action="login_verifica.php" method="POST">
-    <div>
-        <input type="text" name="user" id="user" placeholder="Usuário">
-    </div>
-    <div>
-        <input type="password" name="password" id="password" placeholder="Senha">
-    </div>
-     <div>
-       <input type="submit" value="Acessar">
-    </div>
-</form>
+<div class="container-main">
+    <form action="login_verifica.php" method="POST">
+        <div>
+            <input type="text" class="form-control" name="user" id="user" placeholder="Usuário">
+        </div>
+        <div>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Senha">
+        </div>
+        <div>
+           <button type="submit" class="btn btn-primary">Acessar</button>
+        </div>
+    </form>
+</div>
