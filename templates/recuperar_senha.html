@@ -1,0 +1,21 @@
+{{ include('inc/header.html') }}
+
+
+<div class="container-main">
+	<form action="recuperar_senha.php" method="POST">
+		<div class="form-container">
+			<h2>Recuperar Senha</h2>
+			{% if msg %}
+				<div>
+					<p class="error-msg">{{  msg }}</p>
+				</div>
+			{% endif %}
+			<div class="input-container">
+				<input type="text" class="form-control" name="username" id="username" placeholder="Digite seu Username">
+			</div>
+			<div class="input-container">
+				<button type="submit" class="btn btn-primary">Recuperar</button>
+			</div>
+		</div>
+	</form>
+</div>

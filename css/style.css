@@ -10,10 +10,33 @@
 }
 
 .container-main {
-    width: 40%;
-    background-color: red;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.form-container {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(206, 204, 204);
+    border-radius: 10px;
+}
+
+.input-container {
+    margin-top: 12px;
+}
+
 
 .h1-usuarios {
     text-align: center;
+}
+
+.error-msg {
+    color: red;
+    padding: 0;
+    margin: 0;
 }
