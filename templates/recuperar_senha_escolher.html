@@ -1,11 +1,14 @@
 <form action="recuperar_senha_escolher.php" method="POST">
-    <div>
-        Digita a senha nova aí. E não vai errar...
-    </div>
-    <div>
-        <input type="password" name="senha" id="senha">
-    </div>
-    <div>
-        <input type="submit" value="Gravar">
-    </div>
+    <input type="hidden" name="token" value="{{ token }}">
+	<div>
+		Digita a senha nova aí. E não vai errar...
+	</div>
+	<div>
+		<input type="password" name="password" id="password">
+        <input type="button" value="👁️" id="olho">
+	</div>
+	<div>
+		<input type="submit" value="Gravar">
+	</div>
 </form>
+<script src="js/olho.js"></script>
