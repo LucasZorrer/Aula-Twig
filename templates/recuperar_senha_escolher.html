@@ -1,14 +1,29 @@
-<form action="recuperar_senha_escolher.php" method="POST">
-    <input type="hidden" name="token" value="{{ token }}">
-	<div>
-		Digita a senha nova aí. E não vai errar...
-	</div>
-	<div>
-		<input type="password" name="password" id="password">
-        <input type="button" value="👁️" id="olho">
-	</div>
-	<div>
-		<input type="submit" value="Gravar">
-	</div>
-</form>
+{{ include('inc/header.html') }}
+
+
+<div class="container-main">
+	<form action="recuperar_senha_escolher.php" method="POST">
+		<div class="form-container">
+			<input type="hidden" name="token" value="{{ token }}">
+			<h3>
+				Digite a Nova Senha
+			</h3>
+			<div>
+				<p class="error-msg">{{ msg }}</p>
+			</div>
+			<div class="input-container">
+				<input type="password" name="password" id="password">
+				<input type="button" value="👁️" id="olho">
+			</div>
+			<div class="input-container">
+				<input type="password" name="confirm_password" id="confirm_password">
+				<input type="button" value="👁️" id="olho2">
+			</div>
+			<div>
+				<input type="submit" class="btn btn-primary" id="gravar" value="Gravar">
+			</div>
+		</div>
+	</form>
+</div>
 <script src="js/olho.js"></script>
+{{ include('inc/footer.html') }}
