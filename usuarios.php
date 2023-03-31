@@ -12,8 +12,8 @@ $twig = new \Twig\Environment($loader);
 $template = $twig->load('listar_usuarios.html');
 
 
-$users = new Usuario;
-
+$user = new Usuario;
+$users = $user->getAll();
 
 echo $template->render([
     "users" => $users
