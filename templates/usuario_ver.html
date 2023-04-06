@@ -1,15 +1,18 @@
-{{ include('inc/header.html') }}
+{% extends "inc/base.html" %}
 
-<div class="container-main">
-	<div class="user-container">
-		<h3>{{ user.nome }}</h3>
-		<p>{{ user.email }}</p>
-		<p>Admin:
-			{% if user.admin == 1%}
-				<td>Sim</td>
-			{% else %}
-				<td>Não</td>
-			{% endif %}
-		</p>
+
+{% block conteudo %}
+	<div class="container-main">
+		<div class="user-container">
+			<h3>{{ user.nome }}</h3>
+			<p>{{ user.email }}</p>
+			<p>Admin:
+				{% if user.admin == 1%}
+					<td>Sim</td>
+				{% else %}
+					<td>Não</td>
+				{% endif %}
+			</p>
+		</div>
 	</div>
-</div>
+{% endblock %}

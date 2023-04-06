@@ -1,7 +1,3 @@
-body {
-    animation: changeColor2 4s infinite;
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -19,6 +15,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 
 .form-container {
     width: 350px;
@@ -38,24 +35,20 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(184, 153, 153);
+    background-color: rgb(139, 138, 138);
     border-radius: 10px;
-    animation: changeColor 5s infinite;
+    border: none;
 }
 
-@-webkit-keyframes changeColor {
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
-  }
+.user-container h3 {
+    font-weight: bold;
+    color: #FFF;
+    margin-bottom: 40px;
+}
 
-  @-webkit-keyframes changeColor2 {
-    0%   {background-color: blue;}
-    25%  {background-color: green;}
-    50%  {background-color: red;}
-    100% {background-color: yellow;}
-  }
+.user-container p {
+    color: #FFF;
+}
 
 .input-container {
     margin-top: 12px;

@@ -1,6 +1,7 @@
 <?php
 
-    require_once('pdo.inc.php');
+    require_once('models/Model.php');
+    require_once('models/Usuario.php');
 
     $nome = $_POST['nome'] ?? false;
     $user = $_POST['user'] ?? false;
@@ -18,15 +19,15 @@
         'cost' => 12
     ]);
 
-    $sql = $pdo->prepare("INSERT INTO usuarios (nome, email, username, senha, admin, ativo)  
-    VALUES (:nome, :email, :user, :senha, :admin, 1)");
+    $usr = new Usuario();
+    $usr->create([
+        'nome' => $nome,
+        'email' => $email,
+        'username' => $user,
+        'senha' => $pass,
+        'admin' => $admin,
+        'ativo' => 1
+    ]);
 
-    $sql->bindParam(":user", $user);
-    $sql->bindParam(":senha", $pass);
-    $sql->bindParam(":nome", $nome);
-    $sql->bindParam(":email", $email);
-    $sql->bindParam(":admin", $admin);
-
-    $sql->execute();
 
     header('location: usuarios.php');
